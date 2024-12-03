@@ -3,6 +3,10 @@
 #include <time.h>
 #include <stdlib.h>
 
+/*
+TO DO: clarify AI behavior when it takes second turn, use memoization / more pruning for efficiency
+*/
+
 
 // Checks whether 'move' is valid given the current state of 'board'.
 // It returns 1 when the move is valid, otherwise 0.
@@ -196,7 +200,6 @@ int evaluate_position(int board[][COLUMNS], int AI_num) {
 	return score;
 }
 		
-
 
 int* minimax(int board[][COLUMNS], int depth, int max, int last_move, int alpha, int beta, int AI_num, int opposing_num) {
 
